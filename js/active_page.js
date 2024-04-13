@@ -6,7 +6,7 @@ const activePage = window.location.pathname;
 
 pagesButtons.forEach((button) => {
   // here i check if the link href includes the current page path name and add active class to the current page link
-  if (button.href.includes(activePage)) {
+  if (button.href.includes(activePage) && activePage !== "/") {
     button.classList.add("active");
   }
 });
