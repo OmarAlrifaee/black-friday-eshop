@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../css/bootstrap.min.css"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="../css/all.min.css"
+    />
+    <!-- main file -->
+    <link
+      rel="stylesheet"
+      href="../css/main.css"
+    />
+    <!-- google fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,900;1,300;1,400;1,900&family=League+Gothic&family=Manrope:wght@200;400;500;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&family=Poppins:ital,wght@0,100;0,500;0,600;0,900;1,100;1,200;1,900&family=Roboto+Condensed:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Roboto:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Work+Sans:ital,wght@0,100;0,400;0,600;0,900;1,100;1,400;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- start custom colors menu -->
+    <div class="out-div fw-bold">
+      Custom <i class="fa-solid fa-palette"></i>
+    </div>
+    <div class="custom-colors bg-light p-5">
+      <div class="title text-capitalize text-black text-center fs-3 mb-5">
+        chosse your custom font color
+      </div>
+      <div
+        class="text-primary text-capitalize text-center mb-3 defualt"
+        onclick="setDefualt()"
+      >
+        Defualt
+      </div>
+      <button
+        class="btn d-block bg-danger text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="orange"
+      >
+        orange
+      </button>
+      <button
+        class="btn d-block bg-primary mt-4 text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="blue"
+      >
+        blue
+      </button>
+      <button
+        class="btn d-block bg-success mt-4 text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="green"
+      >
+        green
+      </button>
+    </div>
+    <!-- End custom colors menu -->
+    <!-- start go up button  -->
+    <div class="go-up text-white d-none">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- End go up button  -->
+    <!-- start landing -->
+    <div class="landing position-relative pb-5">
+      <!-- start counter offers alert -->
+      <div
+        class="alert bg-danger px-5 border-0 d-none alert-light alert-dismissible fade show rounded-0 fixed-bottom d-flex justify-content-between align-content-center"
+        role="alert"
+      >
+        <h4 class="fw-bold text-white text-uppercase fs-6">
+          the offer time is end
+        </h4>
+        <button
+          type="button"
+          class="close bg-transparent border-0 text-white"
+          onclick="closeAlert()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <!-- End counter alert -->
+      <!-- start menu -->
+      <div class="menu p-4 position-fixed top-0">
+        <div
+          class="head d-flex justify-content-between align-items-center pb-2"
+        >
+          <div class="text-light fw-normal text-capitalize fs-6">
+            shoping cart
+          </div>
+          <i
+            class="fa-regular fa-circle-xmark"
+            onclick="closeMenu()"
+          ></i>
+        </div>
+        <div
+          class="empty position-absolute text-capitalize text-center text-white-50"
+        >
+          No products in the cart.
+        </div>
+        <div class="overflow-auto">
+          <ul class="my-3 list-unstyled p-3"></ul>
+        </div>
+        <div class="foot position-absolute bottom-0 w-100 p-3">
+          <div
+            class="fw-bold text-center mx-auto mb-3 text-white-50 text-capitalize items-count d-none"
+          >
+            all items : <span class="all-items">20</span> <br />
+            total price is : <span class="total-price">$500</span>
+          </div>
+          <a
+            href="shop.html"
+            class="btn btn-lg d-block w-100 fw-bold text-light text-capitalize rounded-0 shadow-sm"
+          >
+            continue shoping
+          </a>
+        </div>
+      </div>
+      <!-- End menu -->
+      <div class="container">
+        <!-- start navbar -->
+        <nav
+          class="navbar bg-transparent justify-content-between align-items-center"
+        >
+          <a
+            class="navbar-brand"
+            href="#"
+          >
+            <img
+              src="../main_images/logo-me.svg"
+              class="img-fluid"
+              alt=""
+            />
+          </a>
+          <div
+            class="navbar-nav d-lg-flex d-none flex-column flex-lg-row gap-lg-5 me-lg-5"
+          >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="home.html"
+              >Home</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="shop.html"
+              >shop</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="about.html"
+              >about</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="contact.html"
+              >content</a
+            >
+          </div>
+          <div class="icons">
+            <div
+              class="rounded-circle p-1 text-center d-flex justify-content-center align-items-center"
+            >
+              <span id="bag-items-count">0</span>
+            </div>
+            <i
+              class="fa-solid fa-bag-shopping fa-2x"
+              onclick="openMenu()"
+            ></i>
+            <i
+              class="fa-solid fa-bars fa-2x d-inline-block ms-3 d-lg-none"
+              onclick="openClose()"
+            ></i>
+          </div>
+        </nav>
+        <!-- End navbar -->
+        <div class="text text-center pt-5 mt-5">
+          <h4 class="text-capitalize fst-italic mb-2 mt-5 fs-3">
+            Hurry, Black Friday Is Almost Here!
+          </h4>
+          <h3 class="fw-bold text-center lh-sm">
+            TIME LEFT UNTIL OUR
+            <span
+              >BIGGEST SALE <br />
+              OF THE YEAR BEGINS</span
+            >
+          </h3>
+        </div>
+        <button
+          class="fs-3 fw-normal shadow-sm btn text-light text-capitalize mx-auto d-block mt-3 btn-lg rounded-0 set-reminder"
+        >
+          set reminder
+        </button>
+        <div
+          class="d-flex justify-content-center align-items-center gap-5 text-center flex-wrap pt-5 mt-5 text-light counter-container"
+        >
+          <div
+            class="box border rounded-0 p-4"
+            data-time="days"
+          >
+            <h3 class="fw-bold">00</h3>
+            <div class="fs-6 text-capitalize">days</div>
+          </div>
+          <div
+            class="box border rounded-0 p-4"
+            data-time="hours"
+          >
+            <h3 class="fw-bold">00</h3>
+            <div class="fs-6 text-capitalize">hours</div>
+          </div>
+          <div
+            class="box border rounded-0 p-4"
+            data-time="minutes"
+          >
+            <h3 class="fw-bold">00</h3>
+            <div class="fs-6 text-capitalize">minutes</div>
+          </div>
+          <div
+            class="box border rounded-0 p-4"
+            data-time="seconds"
+          >
+            <h3 class="fw-bold">00</h3>
+            <div class="fs-6 text-capitalize">seconds</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End landing -->
+    <!-- start black headphone offer  box-->
+    <div class="black-headphone-section py-5 bg-black">
+      <div class="container py-5">
+        <div
+          class="image d-flex justify-content-center align-items-center flex-lg-nowrap flex-wrap-reverse p-5"
+        >
+          '
+          <div class="text text-capitalize text-lg-start text-center p-3">
+            <h4 class="fst-italic fw-bold fs-2">Up To 50% Off</h4>
+            <h3 class="text-uppercase fw-bold text-white fst-normal">
+              GRAB YOUR FAVORITES <br />
+              BEFORE THEY'RE GONE
+            </h3>
+            <p class="fw-normal fst-normal text-white">
+              You can trust us to bring you the latest technology at unbeatable
+              prices. Don’t miss this limited-time opportunity to upgrade your
+              audio game. Grab your perfect pair now!
+            </p>
+            <a
+              href="shop.html"
+              class="btn btn-lg text-white fw-medium fs-2 mt-3 rounded-0 shadow-sm text-capitalize"
+            >
+              shop now
+            </a>
+          </div>
+          <div class="image-container mb-lg-0 mb-5 position-relative">
+            <img
+              src="../main_images/headphone-01.png"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End black headphone offer box-->
+    <!-- start pink headphone offer -->
+    <div class="pink-headphone-section bg-black">
+      <div class="container">
+        <div
+          class="d-flex flex-lg-nowrap flex-wrap-reverse justify-content-center align-items-end"
+        >
+          <div class="text text-capitalize text-lg-start text-center p-3">
+            <h4 class="fst-italic fw-bold fs-2">Black Friday Exclusive</h4>
+            <h3 class="text-uppercase fw-bold text-white fst-normal">
+              save big: <span>UP TO 75% OFF</span> <br />
+              ON HEADPHONES
+            </h3>
+            <p class="fw-normal fst-normal text-white">
+              You can trust us to bring you the latest technology at unbeatable
+              prices. Don’t miss this limited-time opportunity to upgrade your
+              audio game.
+            </p>
+            <a
+              href="shop.html"
+              class="btn btn-lg text-white fw-medium fs-2 mt-3 rounded-0 shadow-sm text-capitalize"
+            >
+              shop now
+            </a>
+          </div>
+          <div class="image-container mb-lg-0 mb-5 position-relative">
+            <img
+              src="../main_images/headphones-img-02.jpg"
+              class="img-fluid"
+              alt=""
+            />
+            <img
+              src="../main_images/image.jpg"
+              alt=""
+              class="position-absolute white-bg-img d-xxl-block d-none"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End pink headphone offer -->
+    <!-- start offers -->
+    <div class="offers py-5 bg-black">
+      <div class="container py-5">
+        <div class="text text-capitalize text-center p-3">
+          <h4 class="fst-italic fw-medium fs-2">
+            Unbelievable Discounts Await You
+          </h4>
+          <h3 class="text-uppercase fw-bold text-white fst-normal">
+            BLACK FRIDAY MADNESS IS HERE!
+          </h3>
+          <div class="line bg-white text-center mx-auto mt-4"></div>
+        </div>
+        <div
+          class="row justify-content-center align-items-center mt-5 gap-lg-0 gap-3"
+        >
+          <!-- start product -->
+          <div class="col-lg-3 col-md-4">
+            <div
+              class="product"
+              data-img="../products_images/5-product-400x463.jpg"
+              data-title="NexaTone Headsets"
+              data-price="200"
+            >
+              <div class="image position-relative">
+                <div
+                  class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+                >
+                  <div
+                    class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                  >
+                    -50%
+                  </div>
+                  <div
+                    class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                    data-toggle="tooltip"
+                    data-bs-placement="left"
+                    title="Add To Cart"
+                  >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </div>
+                </div>
+                <img
+                  src="../products_images/5-product-400x463.jpg"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+              </div>
+              <div class="text">
+                <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                  NexaTone Headsets
+                </h3>
+                <div class="start text-warning">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="price d-flex gap-1 align-items-center">
+                  <span
+                    class="old-price text-decoration-line-through text-white-50 fw-bold"
+                    >$270</span
+                  >
+                  <span class="fw-bold text-white">$200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- start product -->
+          <div class="col-lg-3 col-md-4">
+            <div
+              class="product"
+              data-img="../products_images/6-product-400x463.jpg"
+              data-title="AudioSculpt Elite"
+              data-price="370"
+            >
+              <div class="image position-relative">
+                <div
+                  class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+                >
+                  <div
+                    class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                  >
+                    -70%
+                  </div>
+                  <div
+                    class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                    data-toggle="tooltip"
+                    data-bs-placement="left"
+                    title="Add To Cart"
+                  >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </div>
+                </div>
+                <img
+                  src="../products_images/6-product-400x463.jpg"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+              </div>
+              <div class="text">
+                <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                  AudioSculpt Elite
+                </h3>
+                <div class="start text-warning">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="price d-flex gap-1 align-items-center">
+                  <span
+                    class="old-price text-decoration-line-through text-white-50 fw-bold"
+                    >$470</span
+                  >
+                  <span class="fw-bold text-white">$370</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- start product -->
+          <div class="col-lg-3 col-md-4">
+            <div
+              class="product"
+              data-img="../products_images/7-product-400x463.jpg"
+              data-title="EchoPulse SoundGear"
+              data-price="200"
+            >
+              <div class="image position-relative">
+                <div
+                  class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+                >
+                  <div
+                    class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                  >
+                    -90%
+                  </div>
+                  <div
+                    class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                    data-toggle="tooltip"
+                    data-bs-placement="left"
+                    title="Add To Cart"
+                  >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </div>
+                </div>
+                <img
+                  src="../products_images/7-product-400x463.jpg"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+              </div>
+              <div class="text">
+                <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                  EchoPulse SoundGear
+                </h3>
+                <div class="start text-warning">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="price d-flex gap-1 align-items-center">
+                  <span
+                    class="old-price text-decoration-line-through text-white-50 fw-bold"
+                    >$700</span
+                  >
+                  <span class="fw-bold text-white">$200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- start product -->
+          <div class="col-lg-3 col-md-4">
+            <div
+              class="product"
+              data-img="../products_images/8-product-400x463.jpg"
+              data-title="NexaTone Headsets"
+              data-price="370"
+            >
+              <div class="image position-relative">
+                <div
+                  class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+                >
+                  <div
+                    class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                  >
+                    -10%
+                  </div>
+                  <div
+                    class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                    data-toggle="tooltip"
+                    data-bs-placement="left"
+                    title="Add To Cart"
+                  >
+                    <i class="fa-solid fa-bag-shopping"></i>
+                  </div>
+                </div>
+                <img
+                  src="../products_images/8-product-400x463.jpg"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+              </div>
+              <div class="text">
+                <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                  NexaTone Headsets
+                </h3>
+                <div class="start text-warning">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="price d-flex gap-1 align-items-center">
+                  <span
+                    class="old-price text-decoration-line-through text-white-50 fw-bold"
+                    >$400</span
+                  >
+                  <span class="fw-bold text-white">$370</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End offers -->
+    <!-- start save big -->
+    <div class="save-big py-5">
+      <div class="container">
+        <div class="box">
+          <div class="text text-center text-capitalize w-100">
+            <h4 class="fst-italic fs-3">Limited-Time Offer</h4>
+            <h3 class="my-3 text-uppercase fw-bold">
+              SAVE BIG: UP TO <span>60% OFF</span> ON ALL HEADPHONES
+            </h3>
+            <div class="text-uppercase fw-bold text-white">
+              ACT FAST BEFORE THEY'RE GONE
+            </div>
+            <a
+              href="shop.html"
+              class="btn btn-lg rounded-0 border-0 text-white text-uppercase mt-5"
+              >shop now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End save big -->
+    <!-- start why-choose -->
+    <div class="why-choose py-5 bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="text text-lg-start text-center text-capitalize mt-5">
+              <h4 class="fst-italic">Why Choose BlackFridayShop?</h4>
+              <h3 class="text-uppercase text-white">
+                THE JOY OF SHOPPING <br />
+                AT ITS BEST
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 row">
+            <div
+              class="box text-white col-lg-6 col-12 py-3 text-lg-start text-center mt-lg-0 mt-5"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-truck fa-2x"
+              ></i>
+              <h3 class="text-uppercase fs-1 mt-3">FREE SHIPPING</h3>
+              <p class="text-white-50 text-capitalize">
+                Delight in seamless free shipping, enhancing your shopping
+                experience. Navigate our diverse collection, where cost savings
+                meet product joy
+              </p>
+            </div>
+            <div
+              class="box text-white col-lg-6 col-12 py-3 text-lg-start text-center"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-lock fa-2x"
+              ></i>
+              <h3 class="text-uppercase fs-1 mt-3">SECURE PAYMENTS</h3>
+              <p class="text-white-50 text-capitalize">
+                Shop with confidence using our secure payment methods. Your
+                transactions are protected, providing peace of mind for a
+                worry-free shopping
+              </p>
+            </div>
+            <div
+              class="box text-white col-lg-6 col-12 py-3 text-lg-start text-center"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-map-marker-alt fa-2x"
+              ></i>
+              <h3 class="text-uppercase fs-1 mt-3">ORDER TRACKING</h3>
+              <p class="text-white-50 text-capitalize">
+                Track your order effortlessly with our streamlined system. Stay
+                informed and in control as your purchase makes its way to your
+                doorstep
+              </p>
+            </div>
+            <div
+              class="box text-white col-lg-6 col-12 py-3 text-lg-start text-center"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-undo fa-2x"
+              ></i>
+              <h3 class="text-uppercase fs-1 mt-3">EASY RETURNS</h3>
+              <p class="text-white-50 text-capitalize">
+                Celebrate worry-free shopping with our hassle-free returns –
+                because we're here to make your shopping experience as smooth as
+                possible
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End why-choose -->
+    <!-- start TESTIMONIALS -->
+    <div class="testimonials py-5 mx-5">
+      <div class="container p-5">
+        <div class="title text-lg-start text-center text-capitalize">
+          <h4 class="fst-italic fs-2">What Our Clients Say</h4>
+          <h3 class="text-uppercase text-white">CUSTOMER TESTIMONIALS</h3>
+        </div>
+        <div class="row mt-5 text-lg-start text-center text-capitalize">
+          <div class="col-lg-6 col-12 py-3">
+            <div class="stars text-warning">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-white mt-4 fw-bold">
+              I couldn't be happier with my Black Friday Shop experience. The
+              deals were incredible, and the quality of the products I purchased
+              exceeded my expectations. I was particularly impressed with the
+              seamless shopping process and the quick, hassle-free delivery.
+            </p>
+            <div class="fs-6 fw-medium text-white">James Oliver</div>
+          </div>
+          <div class="col-lg-6 col-12 py-3">
+            <div class="stars text-warning">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-white mt-4 fw-bold">
+              Absolutely thrilled with my experience at this online store! The
+              selection is fantastic, the prices are unbeatable, and the
+              customer service is top-notch. I recently purchased a camera, and
+              not only did it arrive quickly, but the quality exceeded my
+              expectations. Highly recommended!
+            </p>
+            <div class="fs-6 fw-medium text-white">Daniel Taylor</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End TESTIMONIALS -->
+    <!-- start all-products -->
+    <div class="all-products py-5 border-bottom">
+      <div class="container py-5">
+        <div class="text text-center text-capitalize w-50 mx-auto py-5 mt-5">
+          <h4 class="fst-italic fs-3">Black Friday Sale</h4>
+          <h3 class="my-3 text-uppercase fw-bold">
+            SAVE BIG: UP TO <span>60% OFF</span> ON ALL PRODUCTS
+          </h3>
+          <p class="text-white-50 fw-bold">
+            Don’t miss this exclusive opportunity to embark on a journey of
+            unbeatable savings and cutting-edge technology. It’s time to secure
+            the best deals and upgrade your experience, so seize the moment and
+            start shopping now!
+          </p>
+          <a
+            href="shop.html"
+            class="btn btn-lg rounded-0 border-0 text-white text-uppercase mt-3"
+            >shop now</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- End all-products -->
+    <!-- start footer -->
+    <div class="footer">
+      <div class="container">
+        <!-- start navbar -->
+        <nav
+          class="navbar bg-transparent justify-content-between align-items-center"
+        >
+          <div class="text-white-50 fw-bold mx-auto mx-lg-0 mt-lg-0 mt-3">
+            Copyright © 2024 Black Friday | Powered by Black Friday
+          </div>
+          <div class="navbar-nav d-lg-flex flex-column flex-lg-row gap-lg-3">
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="home.html"
+              >Home</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="shop.html"
+              >shop</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="about.html"
+              >about</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="content.html"
+              >content</a
+            >
+          </div>
+        </nav>
+        <!-- End navbar -->
+      </div>
+    </div>
+    <!-- End footer -->
+    <!-- javaScript -->
+    <!-- bootstrap -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- icons -->
+    <script src="../js/all.min.js"></script>
+    <!-- save and get cart data from local storage -->
+    <script src="../js/getData.js"></script>
+    <!-- navbar bars click -->
+    <script src="../js/navbar.js"></script>
+    <!-- bag icon click -->
+    <script src="../js/bag.js"></script>
+    <!-- counter  -->
+    <script src="../js/counter.js"></script>
+    <!-- tt script -->
+    <script>
+      document.querySelectorAll(".tt").forEach((t) => {
+        new bootstrap.Tooltip(t);
+      });
+    </script>
+    <!-- add to cart -->
+    <script src="../js/add_to_cart.js"></script>
+    <!-- active page -->
+    <script src="../js/active_page.js"></script>
+    <!-- go up button  -->
+    <script src="../js/go_up.js"></script>
+    <!-- custom colors -->
+    <script src="../js/custom_colors.js"></script>
+  </body>
+</html>

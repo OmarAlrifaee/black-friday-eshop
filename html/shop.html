@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../css/bootstrap.min.css"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="../css/all.min.css"
+    />
+    <!-- main file -->
+    <link
+      rel="stylesheet"
+      href="../css/main.css"
+    />
+    <!-- google fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,900;1,300;1,400;1,900&family=League+Gothic&family=Manrope:wght@200;400;500;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&family=Poppins:ital,wght@0,100;0,500;0,600;0,900;1,100;1,200;1,900&family=Roboto+Condensed:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Roboto:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Work+Sans:ital,wght@0,100;0,400;0,600;0,900;1,100;1,400;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+    <title>Shop</title>
+  </head>
+  <body>
+    <!-- start custom colors menu -->
+    <div class="out-div fw-bold">
+      Custom <i class="fa-solid fa-palette"></i>
+    </div>
+    <div class="custom-colors bg-light p-5">
+      <div class="title text-capitalize text-black text-center fs-3 mb-5">
+        chosse your custom font color
+      </div>
+      <div
+        class="text-primary text-capitalize text-center mb-3 defualt"
+        onclick="setDefualt()"
+      >
+        Defualt
+      </div>
+      <button
+        class="btn d-block bg-danger text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="orange"
+      >
+        orange
+      </button>
+      <button
+        class="btn d-block bg-primary mt-4 text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="blue"
+      >
+        blue
+      </button>
+      <button
+        class="btn d-block bg-success mt-4 text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="green"
+      >
+        green
+      </button>
+    </div>
+    <!-- End custom colors menu -->
+    <!-- start go up button  -->
+    <div
+      class="go-up text-white d-none"
+      onclick="goUp()"
+    >
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- End go up button  -->
+    <!-- start menu -->
+    <div class="menu p-4 position-fixed top-0">
+      <div class="head d-flex justify-content-between align-items-center pb-2">
+        <div class="text-light fw-normal text-capitalize fs-6">
+          shoping cart
+        </div>
+        <i
+          class="fa-regular fa-circle-xmark"
+          onclick="closeMenu()"
+        ></i>
+      </div>
+      <div
+        class="empty position-absolute text-capitalize text-center text-white-50"
+      >
+        No products in the cart.
+      </div>
+      <div class="overflow-auto">
+        <ul class="my-3 list-unstyled p-3"></ul>
+      </div>
+      <div class="foot position-absolute bottom-0 w-100 p-3">
+        <div
+          class="fw-bold text-center mx-auto mb-3 text-white-50 text-capitalize items-count d-none"
+        >
+          all items : <span class="all-items">20</span> <br />
+          total price is : <span class="total-price">$500</span>
+        </div>
+        <a
+          href="shop.html"
+          class="btn btn-lg d-block w-100 fw-bold text-light text-capitalize rounded-0 shadow-sm"
+        >
+          continue shoping
+        </a>
+      </div>
+    </div>
+    <!-- End menu -->
+    <!-- start shop head  -->
+    <div class="shop-head">
+      <div class="container">
+        <!-- start navbar -->
+        <nav
+          class="navbar bg-transparent justify-content-between align-items-center"
+        >
+          <a
+            class="navbar-brand"
+            href="#"
+          >
+            <img
+              src="../main_images/logo-me.svg"
+              class="img-fluid"
+              alt=""
+            />
+          </a>
+          <div
+            class="navbar-nav d-lg-flex d-none flex-column flex-lg-row gap-lg-5 me-lg-5"
+          >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="home.html"
+              >Home</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="shop.html"
+              >shop</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="about.html"
+              >about</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="contact.html"
+              >content</a
+            >
+          </div>
+          <div class="icons">
+            <div
+              class="rounded-circle p-1 text-center d-flex justify-content-center align-items-center"
+            >
+              <span id="bag-items-count">0</span>
+            </div>
+            <i
+              class="fa-solid fa-bag-shopping fa-2x"
+              onclick="openMenu()"
+            ></i>
+            <i
+              class="fa-solid fa-bars fa-2x d-inline-block ms-3 d-lg-none"
+              onclick="openClose()"
+            ></i>
+          </div>
+        </nav>
+        <!-- End navbar -->
+        <div class="text text-uppercase text-center mt-5">
+          <h3>shop</h3>
+          <div class="d-flex align-items-center justify-content-center">
+            <a
+              class="text-uppercase py-4 text-decoration-none text-danger"
+              href="home.html"
+              >Home</a
+            >
+            <div class="text-uppercase py-4 text-decoration-none text-white">
+              shop
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End shop head  -->
+    </div>
+    <!--start shop content -->
+    <div class="shop-content mt-5 py-5 px-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <div
+          id="products-counter"
+          class="text-white fs-6 text-capitalize fw-bold"
+        >
+          showing <span id="current-product-count"></span> of
+          <span id="all-product-count"></span>
+        </div>
+        <div class="search">
+          <input
+            type="text"
+            class="rounded p-2"
+            placeholder="Search For Item"
+          />
+        </div>
+      </div>
+      <!-- start products  -->
+      <div class="d-flex flex-wrap justify-content-center mt-5 gap-3">
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/1.jpg"
+            data-title="AeroSync Elite Laptops"
+            data-price="475"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -21%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/1.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                AeroSync Elite Laptops
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$600</span
+                >
+                <span class="fw-bold text-white">$475</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/2.jpg"
+            data-title="AudioSculpt Elite"
+            data-price="235"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -37%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/2.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                AudioSculpt Elite
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$375</span
+                >
+                <span class="fw-bold text-white">$235</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/3.jpg"
+            data-title="CamElite Visionaries"
+            data-price="359"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -18%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/3.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                CamElite Visionaries
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$440</span
+                >
+                <span class="fw-bold text-white">$359</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/4.jpg"
+            data-title="EchoPulse SoundGear"
+            data-price="99"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -36%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/4.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                EchoPulse SoundGear
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$155</span
+                >
+                <span class="fw-bold text-white">$99</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/5.jpg"
+            data-title="EvoTech Mobile"
+            data-price="460"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -14%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/5.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                EvoTech Mobile
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$535</span
+                >
+                <span class="fw-bold text-white">$460</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/6.jpg"
+            data-title="FusionFocus Imaging"
+            data-price="485"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -12%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/6.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                FusionFocus Imaging
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$535</span
+                >
+                <span class="fw-bold text-white">$485</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/7.jpg"
+            data-title="LuminaShot Camera"
+            data-price="225"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -25%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/7.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                LuminaShot Camera
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$300</span
+                >
+                <span class="fw-bold text-white">$225</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/8.jpg"
+            data-title="NexaTone Headsets"
+            data-price="110"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -59%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/8.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                NexaTone Headsets
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$270</span
+                >
+                <span class="fw-bold text-white">$110</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/9.jpg"
+            data-title="NexGen Smartphones"
+            data-price="550"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -13%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/9.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                NexGen Smartphones
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$635</span
+                >
+                <span class="fw-bold text-white">$550</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div>
+          <div
+            class="product"
+            data-img="../products_images/10.jpg"
+            data-title="PulseWave Communicators"
+            data-price="250"
+            data-num="first"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -43%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/10.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                PulseWave Communicators
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$435</span
+                >
+                <span class="fw-bold text-white">$250</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div class="d-none">
+          <div
+            class="product"
+            data-img="../products_images/11.jpg"
+            data-title="QuantumEdge Laptops"
+            data-price="449"
+            data-num="second"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -25%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/7-product-400x463.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                QuantumEdge Laptops
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$600</span
+                >
+                <span class="fw-bold text-white">$449</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div class="d-none">
+          <div
+            class="product"
+            data-img="../products_images/12.jpg"
+            data-title="ShutterWise Photography"
+            data-price="299"
+            data-num="second"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -15%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/12.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                ShutterWise Photography
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$350</span
+                >
+                <span class="fw-bold text-white">$299</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div class="d-none">
+          <div
+            class="product"
+            data-img="../products_images/13.jpg"
+            data-title="SonoWave Headphones"
+            data-price="125"
+            data-num="second"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -58%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/13.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                SonoWave Headphones
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$295</span
+                >
+                <span class="fw-bold text-white">$125</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div class="d-none">
+          <div
+            class="product"
+            data-img="../products_images/14.jpg"
+            data-title="SwiftFusion Notebooks"
+            data-price="499"
+            data-num="second"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -23%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/14.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                SwiftFusion Notebooks
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$650</span
+                >
+                <span class="fw-bold text-white">$499</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div class="d-none">
+          <div
+            class="product"
+            data-img="../products_images/15.jpg"
+            data-title="TechNova Laptops"
+            data-price="399"
+            data-num="second"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -27%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/15.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                TechNova Laptops
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$545</span
+                >
+                <span class="fw-bold text-white">$399</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- start product -->
+        <div class="d-none">
+          <div
+            class="product"
+            data-img="../products_images/16.jpg"
+            data-title="ZephyrMobile Innovations"
+            data-price="525"
+            data-num="second"
+          >
+            <div class="image position-relative">
+              <div
+                class="d-flex justify-content-between align-items-center px-4 py-3 position-absolute top-0 w-100"
+              >
+                <div
+                  class="px-2 py-1 rounded-pill fw-medium fs-6 discount-value"
+                >
+                  -12%
+                </div>
+                <div
+                  class="add-to-cart-icon rounded-circle tt d-flex justify-content-center align-items-center"
+                  data-toggle="tooltip"
+                  data-bs-placement="left"
+                  title="Add To Cart"
+                >
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+              </div>
+              <img
+                src="../products_images/16.jpg"
+                class="img-fluid w-100"
+                alt=""
+              />
+            </div>
+            <div class="text">
+              <h3 class="text-white fw-medium mt-2 mb-0 text-uppercase fs-4">
+                ZephyrMobile Innovations
+              </h3>
+              <div class="start text-warning">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="price d-flex gap-1 align-items-center">
+                <span
+                  class="old-price text-decoration-line-through text-white-50 fw-bold"
+                  >$595</span
+                >
+                <span class="fw-bold text-white">$525</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sort-btns btn-group mt-5">
+        <button
+          class="btn btn-outline-danger px-3 fw-bold text-white bg-danger"
+          data-num="first"
+        >
+          1
+        </button>
+        <button
+          class="btn btn-outline-danger px-3 fw-bold text-white"
+          data-num="second"
+        >
+          2
+        </button>
+      </div>
+      <!-- End products  -->
+    </div>
+    <!--End shop content -->
+    <!-- start footer -->
+    <div class="footer">
+      <div class="container">
+        <!-- start navbar -->
+        <nav
+          class="navbar bg-transparent justify-content-between align-items-center"
+        >
+          <div class="text-white-50 fw-bold mx-auto mx-lg-0 mt-lg-0 mt-3">
+            Copyright © 2024 Black Friday | Powered by Black Friday
+          </div>
+          <div class="navbar-nav d-lg-flex flex-column flex-lg-row gap-lg-3">
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="home.html"
+              >Home</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="shop.html"
+              >shop</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="about.html"
+              >about</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="content.html"
+              >content</a
+            >
+          </div>
+        </nav>
+        <!-- End navbar -->
+      </div>
+    </div>
+    <!-- End footer -->
+    <!-- javaScript -->
+    <!-- bootstrap -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- icons -->
+    <script src="../js/all.min.js"></script>
+    <!-- navbar bars click -->
+    <script src="../js/navbar.js"></script>
+    <!-- bag icon click -->
+    <script src="../js/bag.js"></script>
+    <!-- tt script -->
+    <script>
+      document.querySelectorAll(".tt").forEach((t) => {
+        new bootstrap.Tooltip(t);
+      });
+    </script>
+    <!-- add to cart -->
+    <script src="../js/add_to_cart.js"></script>
+    <!-- active page -->
+    <script src="../js/active_page.js"></script>
+    <!-- go up button  -->
+    <script src="../js/go_up.js"></script>
+    <!-- custom colors -->
+    <script src="../js/custom_colors.js"></script>
+    <!-- shop page hundle -->
+    <script src="../js/shop.js"></script>
+  </body>
+</html>

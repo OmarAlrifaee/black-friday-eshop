@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../css/bootstrap.min.css"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="../css/all.min.css"
+    />
+    <!-- main file -->
+    <link
+      rel="stylesheet"
+      href="../css/main.css"
+    />
+    <!-- google fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,900;1,300;1,400;1,900&family=League+Gothic&family=Manrope:wght@200;400;500;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&family=Poppins:ital,wght@0,100;0,500;0,600;0,900;1,100;1,200;1,900&family=Roboto+Condensed:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Roboto:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Work+Sans:ital,wght@0,100;0,400;0,600;0,900;1,100;1,400;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+    <title>About</title>
+  </head>
+  <body>
+    <!-- start custom colors menu -->
+    <div class="out-div fw-bold">
+      Custom <i class="fa-solid fa-palette"></i>
+    </div>
+    <div class="custom-colors bg-light p-5">
+      <div class="title text-capitalize text-black text-center fs-3 mb-5">
+        chosse your custom font color
+      </div>
+      <div
+        class="text-primary text-capitalize text-center mb-3 defualt"
+        onclick="setDefualt()"
+      >
+        Defualt
+      </div>
+      <button
+        class="btn d-block bg-danger text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="orange"
+      >
+        orange
+      </button>
+      <button
+        class="btn d-block bg-primary mt-4 text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="blue"
+      >
+        blue
+      </button>
+      <button
+        class="btn d-block bg-success mt-4 text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="green"
+      >
+        green
+      </button>
+    </div>
+    <!-- End custom colors menu -->
+    <!-- start go up button  -->
+    <div class="go-up text-white d-none">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- End go up button  -->
+    <!-- start landing -->
+    <!-- start counter offers alert -->
+    <div
+      class="alert bg-danger px-5 border-0 d-none alert-light alert-dismissible fade show rounded-0 fixed-bottom d-flex justify-content-between align-content-center"
+      role="alert"
+    >
+      <h4 class="fw-bold text-white text-uppercase fs-6">
+        the offer time is end
+      </h4>
+      <button
+        type="button"
+        class="close bg-transparent border-0 text-white"
+        onclick="closeAlert()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <!-- End counter alert -->
+    <!-- start menu -->
+    <div class="menu p-4 position-fixed top-0">
+      <div class="head d-flex justify-content-between align-items-center pb-2">
+        <div class="text-light fw-normal text-capitalize fs-6">
+          shoping cart
+        </div>
+        <i
+          class="fa-regular fa-circle-xmark"
+          onclick="closeMenu()"
+        ></i>
+      </div>
+      <div
+        class="empty position-absolute text-capitalize text-center text-white-50"
+      >
+        No products in the cart.
+      </div>
+      <ul class="my-3 list-unstyled p-3"></ul>
+      <div class="foot position-absolute bottom-0 w-100 p-3">
+        <div
+          class="fw-bold text-center mx-auto mb-3 text-white-50 text-capitalize items-count d-none"
+        >
+          all items : <span class="all-items">20</span> <br />
+          total price is : <span class="total-price">$500</span>
+        </div>
+        <a
+          href="shop.html"
+          class="btn btn-lg d-block w-100 fw-bold text-light text-capitalize rounded-0 shadow-sm"
+        >
+          continue shoping
+        </a>
+      </div>
+    </div>
+    <!-- End menu -->
+    <div class="about-us">
+      <div class="container">
+        <!-- start navbar -->
+        <nav
+          class="navbar bg-transparent justify-content-between align-items-center"
+        >
+          <a
+            class="navbar-brand"
+            href="#"
+          >
+            <img
+              src="../main_images/logo-me.svg"
+              class="img-fluid"
+              alt=""
+            />
+          </a>
+          <div
+            class="navbar-nav d-lg-flex d-none flex-column flex-lg-row gap-lg-5 me-lg-5"
+          >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="home.html"
+              >Home</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="shop.html"
+              >shop</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="about.html"
+              >about</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="contact.html"
+              >content</a
+            >
+          </div>
+          <div class="icons">
+            <div
+              class="rounded-circle p-1 text-center d-flex justify-content-center align-items-center"
+            >
+              <span id="bag-items-count">0</span>
+            </div>
+            <i
+              class="fa-solid fa-bag-shopping fa-2x"
+              onclick="openMenu()"
+            ></i>
+            <i
+              class="fa-solid fa-bars fa-2x d-inline-block ms-3 d-lg-none"
+              onclick="openClose()"
+            ></i>
+          </div>
+        </nav>
+        <!-- End navbar -->
+        <div class="text text-center text-capitalize lh-lg mt-5 mb-5">
+          <h4 class="fst-italic fs-3">A Few Words</h4>
+          <h3 class="text-uppercase text-white">about us</h3>
+          <div class="line"></div>
+        </div>
+        <div class="bg"></div>
+      </div>
+    </div>
+    <!-- start our-story -->
+    <div class="our-story py-5">
+      <div class="container py-5">
+        <div class="row text-lg-start text-center">
+          <div class="col-lg-6 col-12">
+            <div class="title text-capitalize">
+              <h4 class="fst-italic mb-3 fs-4">our story</h4>
+              <h3 class="text-uppercase text-white lh-1">
+                OUR STORY IS ONE OF
+                <span>PASSION, PERSEVERANCE, AND COMMITMENT</span>
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 mt-lg-0 mt-5">
+            <div class="text">
+              <h3 class="text-white text-uppercase fs-4 mb-3">
+                OUR JOURNEY BEGAN WHEN A GROUP OF DEDICATED INDIVIDUALS, FUELED
+                BY A SHARED LOVE FOR EXCEPTIONAL DEALS AND UNMATCHED SAVINGS,
+                CAME TOGETHER TO CREATE A SHOPPING EXPERIENCE LIKE NO OTHER
+              </h3>
+              <p class="text-white-50 lead fw-bold fs-6">
+                Founded in 2008, BlackFridayShop set out with a simple mission –
+                to make Black Friday accessible to everyone, delivering the
+                thrill of unbeatable discounts to your fingertips. Over the
+                years, we've dedicated ourselves to curating the finest
+                selection of products, from electronics and fashion to home
+                essentials and more, all with one goal in mind: providing you
+                with the ultimate shopping experience. What sets us apart is our
+                relentless pursuit of quality and value. We've scoured the
+                market for the finest products, establishing partnerships with
+                trusted brands that share our commitment to excellence. This
+                dedication ensures that every item you find at BlackFridayShop
+                meets the highest standards of quality.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End our-story -->
+    <!-- start sale -->
+    <div class="sale py-5">
+      <div class="container">
+        <div class="content">
+          <div class="text text-capitalize text-center text-white w-75">
+            <h3 class="text-uppercase">BOUNDLESS LOVE FOR SAVING</h3>
+            <h4 class="fst-italic mt-4">
+              We've Scoured The Market For The Finest Products, Establishing
+              Partnerships With Trusted Brands That Share Our Commitment To
+              Excellence!
+            </h4>
+            <div class="line mt-5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End sale -->
+    <!-- start our values -->
+    <div class="our-values py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="text text-lg-start text-center text-capitalize">
+              <h4 class="fst-italic fs-4">Our Values</h4>
+              <h3 class="text-white text-uppercase lh-1">
+                OUR VALUES ARE AT THE HEART OF EVERYTHING <br />
+                WE DO
+              </h3>
+              <p class="text-white-50 fw-bold">
+                Our values are the foundation upon which BlackFridayShop is
+                built. They’re not just words on a page; they’re the principles
+                that drive our everyday actions and decisions. We are dedicated
+                to upholding these values and ensuring that they shine through
+                in every aspect of your experience with us.
+              </p>
+              <p class="text-white-50 fw-bold mt-4">
+                Thank you for choosing BlackFridayShop, where our values meet
+                your expectations.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12">
+            <img
+              src="../main_images/about-03.jpg"
+              class="img-fluid mt-lg-0 mt-5"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End our values -->
+    <!-- start why-choose -->
+    <div class="why-choose py-5 bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="text text-lg-start text-center text-capitalize mt-5">
+              <h4 class="fst-italic">Why Choose BlackFridayShop?</h4>
+              <h3 class="text-uppercase text-white">
+                THE JOY OF SHOPPING <br />
+                AT ITS BEST
+              </h3>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 row">
+            <div
+              class="box text-white col-lg-6 col-12 py-3 text-lg-start text-center mt-lg-0 mt-5"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-truck fa-2x"
+              ></i>
+              <h3 class="text-uppercase fs-1 mt-3">FREE SHIPPING</h3>
+              <p class="text-white-50 text-capitalize">
+                Delight in seamless free shipping, enhancing your shopping
+                experience. Navigate our diverse collection, where cost savings
+                meet product joy
+              </p>
+            </div>
+            <div
+              class="box text-white col-lg-6 col-12 py-3 text-lg-start text-center"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-lock fa-2x"
+              ></i>
+              <h3 class="text-uppercase fs-1 mt-3">SECURE PAYMENTS</h3>
+              <p class="text-white-50 text-capitalize">
+                Shop with confidence using our secure payment methods. Your
+                transactions are protected, providing peace of mind for a
+                worry-free shopping
+              </p>
+            </div>
+            <div
+              class="box text-white col-lg-6 col-12 py-3 text-lg-start text-center"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-map-marker-alt fa-2x"
+              ></i>
+              <h3 class="text-uppercase fs-1 mt-3">ORDER TRACKING</h3>
+              <p class="text-white-50 text-capitalize">
+                Track your order effortlessly with our streamlined system. Stay
+                informed and in control as your purchase makes its way to your
+                doorstep
+              </p>
+            </div>
+            <div
+              class="box text-white col-lg-6 col-12 py-3 text-lg-start text-center"
+            >
+              <i
+                aria-hidden="true"
+                class="fas fa-undo fa-2x"
+              ></i>
+              <h3 class="text-uppercase fs-1 mt-3">EASY RETURNS</h3>
+              <p class="text-white-50 text-capitalize">
+                Celebrate worry-free shopping with our hassle-free returns –
+                because we're here to make your shopping experience as smooth as
+                possible
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End why-choose -->
+    <!-- start all-products -->
+    <div class="all-products py-5 border-bottom">
+      <div class="container py-5">
+        <div class="text text-center text-capitalize w-50 mx-auto py-5 mt-5">
+          <h4 class="fst-italic fs-3">Black Friday Sale</h4>
+          <h3 class="my-3 text-uppercase fw-bold">
+            SAVE BIG: UP TO <span>60% OFF</span> ON ALL PRODUCTS
+          </h3>
+          <p class="text-white-50 fw-bold">
+            Don’t miss this exclusive opportunity to embark on a journey of
+            unbeatable savings and cutting-edge technology. It’s time to secure
+            the best deals and upgrade your experience, so seize the moment and
+            start shopping now!
+          </p>
+          <a
+            href="shop.html"
+            class="btn btn-lg rounded-0 border-0 text-white text-uppercase mt-3"
+            >shop now</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- End all-products -->
+    <!-- start footer -->
+    <div class="footer">
+      <div class="container">
+        <!-- start navbar -->
+        <nav
+          class="navbar bg-transparent justify-content-between align-items-center"
+        >
+          <div class="text-white-50 fw-bold mx-auto mx-lg-0 mt-lg-0 mt-3">
+            Copyright © 2024 Black Friday | Powered by Black Friday
+          </div>
+          <div class="navbar-nav d-lg-flex flex-column flex-lg-row gap-lg-3">
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="home.html"
+              >Home</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="shop.html"
+              >shop</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="about.html"
+              >about</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="content.html"
+              >content</a
+            >
+          </div>
+        </nav>
+        <!-- End navbar -->
+      </div>
+    </div>
+    <!-- End footer -->
+    <!-- javaScript -->
+    <!-- bootstrap -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- icons -->
+    <script src="../js/all.min.js"></script>
+    <!-- navbar bars click -->
+    <script src="../js/navbar.js"></script>
+    <!-- bag icon click -->
+    <script src="../js/bag.js"></script>
+    <!-- active page -->
+    <script src="../js/active_page.js"></script>
+    <!-- go up button  -->
+    <script src="../js/go_up.js"></script>
+    <!-- custom colors -->
+    <script src="../js/custom_colors.js"></script>
+  </body>
+</html>

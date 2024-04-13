@@ -1,0 +1,665 @@
+:root {
+  --red: #ff4955;
+  --dark-red: #fc3746;
+  --borders-color: #5a5a5a;
+  --bg-color: #000000;
+  --card-nav-color: #2a2a2a;
+}
+
+body {
+  background-color: black;
+}
+/*go up button*/
+.go-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+  background-color: var(--red);
+  cursor: pointer;
+  padding: 5px 10px;
+}
+/* start landing */
+.landing {
+  background-image: linear-gradient(#00000096, black),
+    url(../main_images/main_bg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+@media (max-width: 992px) {
+  .navbar .navbar-nav {
+    position: absolute;
+    bottom: -320px;
+    width: 100%;
+    background-color: #2a2a2a;
+  }
+  .navbar .navbar-nav a {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-top: 1px solid #747474;
+    border-bottom: 1px solid #747474;
+  }
+  .navbar .navbar-nav a:hover {
+    background-color: black;
+  }
+  .navbar .navbar-nav a:hover::after {
+    background-color: transparent;
+  }
+}
+.navbar .navbar-nav a {
+  color: #cecece;
+  transition: 0.3s;
+  position: relative;
+}
+.navbar .navbar-nav .active {
+  color: var(--dark-red);
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--dark-red);
+}
+.navbar .navbar-nav a:hover::after {
+  width: 100%;
+  animation: move 0.3s;
+}
+.navbar .navbar-nav a:hover {
+  color: var(--red);
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.icons {
+  position: relative;
+}
+.icons svg {
+  color: var(--dark-red);
+  cursor: pointer;
+  position: relative;
+}
+.icons div {
+  background-color: var(--dark-red);
+  color: white;
+  transform: translate(18px, 0);
+  font-size: 13px;
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.menu {
+  background-color: #2a2a2a;
+  right: -200%;
+  width: 420px;
+  min-height: 100%;
+  transition: 0.3s;
+  border: 1px solid;
+  border-color: #747474;
+  z-index: 20000000000000000000000000000000;
+}
+@media (max-width: 767px) {
+  .menu {
+    width: 350px;
+  }
+}
+
+.menu .head {
+  border-bottom: 1px solid;
+  border-color: #747474;
+}
+.menu .head svg {
+  cursor: pointer;
+  color: white;
+}
+.menu .head svg:hover {
+  color: var(--red);
+}
+
+.menu .empty {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu .foot {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu .foot a {
+  background-color: var(--dark-red);
+  transition: 0.3s;
+}
+.menu .foot a:hover {
+  background-color: var(--red);
+}
+/*js class*/
+.menu-after-click {
+  right: 0;
+}
+.landing .text h4 {
+  font-family: "Salsa", cursive;
+  color: var(--dark-red);
+}
+
+.landing .text h3 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 120px;
+  color: white;
+  letter-spacing: 2px;
+}
+.landing .text h3 span {
+  color: var(--red);
+}
+.landing .set-reminder {
+  background-color: var(--dark-red);
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+.landing .counter-container .box {
+  width: 250px;
+  height: 250px;
+}
+.landing .counter-container h3 {
+  font-size: 120px;
+}
+/* End landing */
+/* start image box */
+.black-headphone-section .image {
+  background-image: url(../main_images/image-bg.jpg);
+  background-size: cover;
+}
+.black-headphone-section .image .text h4 {
+  font-family: "Salsa", cursive;
+  color: var(--dark-red);
+}
+.black-headphone-section .image .text h3 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 100px;
+}
+.black-headphone-section .image .text a {
+  background-color: var(--red);
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+/* End image box */
+/* start pink-headphone-section */
+.pink-headphone-section .text h4 {
+  color: var(--dark-red);
+  font-family: "Salsa", cursive;
+}
+.pink-headphone-section .text h3 {
+  font-size: 80px;
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+.pink-headphone-section .text h3 span {
+  color: var(--dark-red);
+}
+.pink-headphone-section .text a {
+  background-color: var(--red);
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+.pink-headphone-section .image-container .white-bg-img {
+  position: absolute;
+  left: -138px;
+  top: 20px;
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+}
+/* End pink-headphone-section */
+/* start offers */
+.offers .text h4 {
+  color: var(--red);
+  font-family: "Salsa", cursive;
+}
+.offers .text h3 {
+  font-size: 80px;
+  font-family: "League Gothic", sans-serif;
+}
+.offers .text .line {
+  height: 1px;
+  width: 80px;
+}
+.product .discount-value {
+  background-color: #2a2a2a;
+  color: #ffffffb0;
+}
+.product .add-to-cart-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #2a2a2a;
+  cursor: pointer;
+  color: #ffffffb0;
+}
+.product:hover .discount-value {
+  color: white;
+}
+.product:hover .add-to-cart-icon {
+  color: white;
+}
+.product .text h3 {
+  font-family: "League Gothic", sans-serif;
+}
+.product .text .start svg {
+  font-size: 12px;
+}
+.product img {
+  max-width: 350px;
+}
+/* End offers */
+/* menu items  */
+.menu ul li img {
+  width: 60px;
+  height: 60px;
+}
+.menu ul li h4 {
+  color: white;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+.menu ul li .buttons-container {
+  width: fit-content;
+}
+.menu ul li .m {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+.menu ul li .products-count {
+  background-color: white;
+  color: black;
+  padding: 5px 15px;
+}
+.menu ul li .p {
+  color: white;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+.menu ul li .remove-product {
+  cursor: pointer;
+}
+.menu ul li .remove-product:hover {
+  color: red;
+}
+.menu ul li .price {
+  font-size: 20px;
+  font-weight: bold;
+}
+/* menu items  */
+/* start save big section */
+.save-big {
+}
+.save-big .box {
+  position: relative;
+  height: 100vh;
+}
+.save-big .box::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(#000000cb, #000000cb),
+    url(../main_images/bg-07.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.save-big .box .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.save-big .box .text h4 {
+  color: var(--red);
+  font-family: "Salsa", cursive;
+}
+
+.save-big .box .text h3 {
+  color: white;
+  font-family: "League Gothic", sans-serif;
+  font-size: 80px;
+}
+.save-big .box .text h3 span {
+  color: var(--red);
+}
+.save-big .box .text div {
+  font-family: "League Gothic", sans-serif;
+  font-size: 30px;
+}
+
+.save-big .box .text a {
+  background-color: var(--red);
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+/* End save big section */
+/* start why-choose */
+.why-choose .text h4 {
+  color: var(--dark-red);
+  font-family: "Salsa", cursive;
+}
+.why-choose .text h3 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 80px;
+}
+.why-choose .box h3 {
+  font-family: "League Gothic", sans-serif;
+}
+.why-choose .box p {
+}
+/* End why-choose */
+/* start testimonials */
+.testimonials {
+  background-image: linear-gradient(#00000073, #000000b7),
+    url(../main_images/testimonials.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right;
+  position: relative;
+  top: 100px;
+  box-shadow: 0 0 50px black;
+}
+.testimonials .title h4 {
+  color: var(--red);
+  font-family: "Salsa", cursive;
+}
+.testimonials .title h3 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 80px;
+  word-break: break-all;
+}
+/* End testimonials */
+/* start all-products */
+
+.all-products {
+  background-image: linear-gradient(#00000096, black),
+    url(../main_images/main_bg.jpg);
+  background-size: cover;
+}
+.all-products .text h4 {
+  color: var(--red);
+  font-family: "Salsa", cursive;
+}
+.all-products .text h3 {
+  color: white;
+  font-family: "League Gothic", sans-serif;
+  font-size: 80px;
+}
+.all-products .text h3 span {
+  color: var(--red);
+}
+.all-products .text a {
+  background-color: var(--red);
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+/* End all-products */
+/* start shop page styling */
+.shop-head {
+  background-image: linear-gradient(#00000096, black),
+    url(../main_images/main_bg.jpg);
+  background-size: cover;
+}
+.shop-head .text h3 {
+  color: white;
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+  font-size: 120px;
+}
+.shop-head .text a::after {
+  padding: 0 0.3em;
+  content: "\00bb";
+  color: white;
+}
+.shop-content .search input:focus {
+  outline: none;
+}
+/* End shop page styling */
+/* start custom menu */
+.custom-colors {
+  position: fixed;
+  left: -383px;
+  left: -100;
+  top: 0;
+  height: 100vh;
+  z-index: 20000000000000000000000000000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  width: 350px;
+}
+.custom-after-click {
+  left: 0;
+}
+.out-div {
+  content: "";
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 200;
+  transition: 0.5s;
+  color: #525ceb;
+}
+.out-div:hover {
+  color: white;
+  background-color: #525ceb;
+}
+.out-div-after-click {
+  left: 350px;
+}
+.custom-colors .defualt {
+  cursor: pointer;
+}
+.custom-colors .active-color {
+  border: 2px solid black;
+}
+/* ENd custom menu */
+/*custem colors class's*/
+.f-n-color {
+  color: #ff7a3d !important;
+}
+.f-d-color {
+  color: #ff5100 !important;
+}
+.f-bg-color {
+  background-color: #1e1810 !important;
+}
+.s-n-color {
+  color: #30c7b5 !important;
+}
+.s-d-color {
+  color: #00ac97 !important;
+}
+.s-bg-color {
+  background-color: #1e1810 !important;
+}
+.th-n-color {
+  color: #00d0ec !important;
+}
+.th-d-color {
+  color: #2fe6ff !important;
+}
+.th-bg-color {
+  background-color: #101218 !important;
+}
+/* start about-us */
+.about-us {
+  background-image: linear-gradient(#00000096, black),
+    url(../main_images/main_bg.jpg);
+  background-size: cover;
+}
+.about-us .text h4 {
+  color: var(--red);
+  font-family: "Salsa", cursive;
+}
+.about-us .text h3 {
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+  font-size: 120px;
+}
+.about-us .text .line {
+  height: 2px;
+  width: 100px;
+  margin: auto;
+  background-color: var(--dark-red);
+}
+.about-us .bg {
+  background-image: url(../main_images/about-02.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 50vh;
+  margin-top: 100px;
+}
+.our-story .title h4 {
+  color: var(--red);
+  font-family: "Salsa", cursive;
+}
+.our-story .title h3 {
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+  font-size: 80px;
+}
+.our-story .title h3 span {
+  color: var(--red);
+}
+.our-story .text h3 {
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+.our-story .text p {
+}
+/* End about-us */
+/* start sale  */
+.sale .content {
+  position: relative;
+  height: 75vh;
+}
+.sale .content::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(#0000008e, #0000008e),
+    url(../main_images/about-01.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.sale .content .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sale .content .text h3 {
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+.sale .content .text h4 {
+  font-family: "Salsa", cursive;
+}
+.sale .content .text .line {
+  width: 77px;
+  height: 2px;
+  background: white;
+  margin: auto;
+}
+/* End sale  */
+/* start our values */
+.our-values .text h4 {
+  font-family: "Salsa", cursive;
+  color: var(--dark-red);
+}
+.our-values .text h3 {
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+  font-size: 80px;
+}
+/* End our values */
+/* start contact us */
+.contact-us {
+  background-image: linear-gradient(#00000096, black),
+    url(../main_images/main_bg.jpg);
+  background-size: cover;
+  min-height: 100vh;
+}
+.contact-us .text h4 {
+  font-family: "Salsa", cursive;
+  color: var(--dark-red);
+}
+.contact-us .text h3 {
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+  font-size: 80px;
+}
+.contact-us .text .line {
+  margin: 20px auto;
+  background: red;
+  width: 100px;
+  height: 1px;
+}
+.contact-us .info h3 {
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+  font-size: 80px;
+  color: white;
+}
+.contact-us .info p {
+}
+.contact-us .box {
+  border-bottom: 1px solid #818181;
+}
+.contact-us .box h4 {
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+  color: white;
+}
+.contact-us .box .icon svg {
+  color: var(--dark-red);
+}
+.contact-us form {
+}
+.contact-us form input:focus,
+.contact-us form textarea:focus {
+  outline: none;
+}
+.contact-us form textarea {
+  resize: none;
+  min-height: 100px;
+}
+.contact-us form button {
+  background-color: var(--dark-red);
+  font-family: "League Gothic", sans-serif;
+  letter-spacing: 2px;
+}
+.contact-us form .btn:hover,
+.contact-us form .btn:focus,
+.contact-us form .btn:active {
+  outline: none;
+  background-color: var(--dark-red);
+  border: none;
+}
+/* End contact us */
+/*THE END OF THE PROJECT*/

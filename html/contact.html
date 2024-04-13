@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../css/bootstrap.min.css"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="../css/all.min.css"
+    />
+    <!-- main file -->
+    <link
+      rel="stylesheet"
+      href="../css/main.css"
+    />
+    <!-- google fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,400;0,900;1,300;1,400;1,900&family=League+Gothic&family=Manrope:wght@200;400;500;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,600;1,800&family=Poppins:ital,wght@0,100;0,500;0,600;0,900;1,100;1,200;1,900&family=Roboto+Condensed:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Roboto:ital,wght@0,100;0,400;0,900;1,100;1,400;1,900&family=Work+Sans:ital,wght@0,100;0,400;0,600;0,900;1,100;1,400;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact</title>
+  </head>
+  <body>
+    <!-- start custom colors menu -->
+    <div class="out-div fw-bold">
+      Custom <i class="fa-solid fa-palette"></i>
+    </div>
+    <div class="custom-colors bg-light p-5">
+      <div class="title text-capitalize text-black text-center fs-3 mb-5">
+        chosse your custom font color
+      </div>
+      <div
+        class="text-primary text-capitalize text-center mb-3 defualt"
+        onclick="setDefualt()"
+      >
+        Defualt
+      </div>
+      <button
+        class="btn d-block bg-danger text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="orange"
+      >
+        orange
+      </button>
+      <button
+        class="btn d-block bg-primary mt-4 text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="blue"
+      >
+        blue
+      </button>
+      <button
+        class="btn d-block bg-success mt-4 text-capitalize text-light py-3 px-5 mx-auto"
+        data-color="green"
+      >
+        green
+      </button>
+    </div>
+    <!-- End custom colors menu -->
+    <div class="contact-us">
+      <!-- start menu -->
+      <div class="menu p-4 position-fixed top-0">
+        <div
+          class="head d-flex justify-content-between align-items-center pb-2"
+        >
+          <div class="text-light fw-normal text-capitalize fs-6">
+            shoping cart
+          </div>
+          <i
+            class="fa-regular fa-circle-xmark"
+            onclick="closeMenu()"
+          ></i>
+        </div>
+        <div
+          class="empty position-absolute text-capitalize text-center text-white-50"
+        >
+          No products in the cart.
+        </div>
+        <ul class="my-3 list-unstyled p-3"></ul>
+        <div class="foot position-absolute bottom-0 w-100 p-3">
+          <div
+            class="fw-bold text-center mx-auto mb-3 text-white-50 text-capitalize items-count d-none"
+          >
+            all items : <span class="all-items">20</span> <br />
+            total price is : <span class="total-price">$500</span>
+          </div>
+          <a
+            href="shop.html"
+            class="btn btn-lg d-block w-100 fw-bold text-light text-capitalize rounded-0 shadow-sm"
+          >
+            continue shoping
+          </a>
+        </div>
+      </div>
+      <!-- End menu -->
+      <div class="container">
+        <!-- start navbar -->
+        <nav
+          class="navbar bg-transparent justify-content-between align-items-center"
+        >
+          <a
+            class="navbar-brand"
+            href="#"
+          >
+            <img
+              src="../main_images/logo-me.svg"
+              class="img-fluid"
+              alt=""
+            />
+          </a>
+          <div
+            class="navbar-nav d-lg-flex d-none flex-column flex-lg-row gap-lg-5 me-lg-5"
+          >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="home.html"
+              >Home</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="shop.html"
+              >shop</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="about.html"
+              >about</a
+            >
+            <a
+              class="nav-item nav-link text-uppercase fw-bold py-4"
+              href="contact.html"
+              >content</a
+            >
+          </div>
+          <div class="icons">
+            <div
+              class="rounded-circle p-1 text-center d-flex justify-content-center align-items-center"
+            >
+              <span id="bag-items-count">0</span>
+            </div>
+            <i
+              class="fa-solid fa-bag-shopping fa-2x"
+              onclick="openMenu()"
+            ></i>
+            <i
+              class="fa-solid fa-bars fa-2x d-inline-block ms-3 d-lg-none"
+              onclick="openClose()"
+            ></i>
+          </div>
+        </nav>
+        <!-- End navbar -->
+        <div class="text text-center text-capitalize lh-lg mt-5 mb-5">
+          <h4 class="fst-italic fs-3 mt-5">Let's Talk</h4>
+          <h3 class="text-uppercase text-white">contact us</h3>
+          <div class="line"></div>
+        </div>
+        <div class="row gap-5 mt-5 py-5 justify-content-between">
+          <div class="col-lg-5 col-12">
+            <div class="info">
+              <h3 class="text-uppercase">get in touch</h3>
+              <p class="text-white-50 fs-6 fw-bold text-capitalize">
+                Have questions or need assistance? Click the 'Contact Us' icon
+                to get in touch with our friendly and responsive customer
+                support team
+              </p>
+            </div>
+            <div class="d-flex flex-column gap-3 mt-5">
+              <div class="box d-flex gap-3">
+                <div class="icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="location">
+                  <h4 class="text-uppercase">ADDRESS</h4>
+                  <p class="text-white-50 fw-bold fs-6">
+                    2972 Westheimer Rd. Santa Ana, Illinois 85486
+                  </p>
+                </div>
+              </div>
+              <div class="box d-flex gap-3">
+                <div class="icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="location">
+                  <h4 class="text-uppercase">PHONE</h4>
+                  <p class="text-white-50 fw-bold fs-6">(405) 555-0128</p>
+                </div>
+              </div>
+              <div class="box d-flex gap-3">
+                <div class="icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="location">
+                  <h4 class="text-uppercase">EMAIL</h4>
+                  <p class="text-white-50 fw-bold fs-6">hello@example.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-12 mt-5">
+            <form action="">
+              <div class="d-flex align-items-center gap-5">
+                <div class="w-50">
+                  <label
+                    for="first-name"
+                    class="fs-6 text-white-50 fw-bold"
+                    >First Name</label
+                  >
+                  <input
+                    id="first-name"
+                    type="text"
+                    class="d-block p-2 bg-white border-0 w-100 mt-1"
+                  />
+                </div>
+                <div class="w-50">
+                  <label
+                    for="last-name"
+                    class="text-white-50 fs-6 fw-bold"
+                    >Last Name</label
+                  >
+                  <input
+                    id="last-name"
+                    type="text"
+                    class="d-block p-2 bg-white border-0 w-100 mt-1"
+                  />
+                </div>
+              </div>
+              <div class="mt-5">
+                <label
+                  for="email"
+                  class="text-white-50 fs-6 fw-bold"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="d-block w-100 p-2 bg-white border-0 mt-1"
+                />
+              </div>
+              <div class="mt-5">
+                <label
+                  for="massege"
+                  class="text-white-50 fs-6 fw-bold"
+                  >Your Massege</label
+                >
+                <textarea
+                  id="massege"
+                  class="bg-white d-block w-100 p-2 border-0 mt-1"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="border-0 btn btn-lg py-2 px-4 rounded-0 mt-5 text-white fs-4"
+              >
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- javaScript -->
+    <!-- bootstrap -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- icons -->
+    <script src="../js/all.min.js"></script>
+    <!-- navbar bars click -->
+    <script src="../js/navbar.js"></script>
+    <!-- bag icon click -->
+    <script src="../js/bag.js"></script>
+    <!-- active page -->
+    <script src="../js/active_page.js"></script>
+    <!-- custom colors -->
+    <script src="../js/custom_colors.js"></script>
+  </body>
+</html>
